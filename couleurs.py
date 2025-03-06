@@ -14,7 +14,7 @@ def draw_pixel(i,j,color):
 def ecran_aleatoire():
     for i in range(256):
         for j in range(256):
-            draw_pixel(i,j,get_color(rd.randint(0,256),rd.randint(0,256),rd.randint(0,256)))
+            draw_pixel(i,j,get_color(rd.randint(0,255),rd.randint(0,255),rd.randint(0,255)))
 
 def degrade_gris():
     a = 0
@@ -38,6 +38,6 @@ B3 = tk.Button(racine, text = 'Dégradé 2D', command = degrade_2D)
 
 C.grid(row = 0, column = 1, rowspan = 3)
 B1.grid(row = 0, column = 0)
-B2.grid(row = 3, column = 0)
+B2.grid(row = 1, column = 0)
 B3.grid(row = 2, column = 0)
-racine.mainloop
+racine.mainloop()
