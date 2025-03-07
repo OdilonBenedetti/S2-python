@@ -9,18 +9,18 @@ racine = tk.Tk()
 C = tk.Canvas(racine, height = 256, width = 256, bg = 'black')
 
 def draw_pixel(i,j,color):
-    C.create_rectangle(i,j,i+1,j+1, width=0, fill = color)
+    C.create_rectangle(i, j, i+1, j+1, width=0, fill = color)
 
 def ecran_aleatoire():
     for i in range(256):
         for j in range(256):
-            draw_pixel(i,j,get_color(rd.randint(0,255),rd.randint(0,255),rd.randint(0,255)))
+            draw_pixel(i,j,get_color(rd.randint(0,255), rd.randint(0,255), rd.randint(0,255)))
 
 def degrade_gris():
     a = 0
     for i in range(256):
         for j in range(256):
-            draw_pixel(i,j,get_color(a,a,a))
+            draw_pixel(i,j,get_color(a, a, a))
         a = a + 1
 
 def degrade_2D():
@@ -28,7 +28,7 @@ def degrade_2D():
     for i in range(256):
         b = 0
         for j in range(256):
-            draw_pixel(i,j,get_color(a,0,b))
+            draw_pixel(i,j,get_color(a, 0, b))
             b = b + 1
         a = a + 1
 
